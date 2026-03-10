@@ -1,8 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Fast_access_Card from "../Components/Fast_access_Card";
 import Role_dashBoard_Card from "../Components/Role_dashBoard_Card";
 
 function Landing_Page() {
+  const navigate = useNavigate();
+
   return (
     <>
  <div className="flex flex-col items-center justify-center text-center min-w-screen min-h-screen    bg-black text-white">
@@ -13,7 +16,7 @@ function Landing_Page() {
         <div className="">
             <p className='text-xl'>Smart, simple, and reliable attendance for modern classrooms.</p>
         </div>
-        <div className=""><button className=' bg-white text-black rounded-lg h-11  w-20 cursor-pointer '>Login</button>
+        <div className=""><button onClick={() => navigate("/login")} className=' bg-white text-black rounded-lg h-11  w-20 cursor-pointer '>Login</button>
 
         </div>
      </div>

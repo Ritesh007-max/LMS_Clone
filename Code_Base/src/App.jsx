@@ -1,17 +1,16 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
+import { Route, Routes } from "react-router-dom";
 import Landing_Page from "./Pages/Landing_Page";
+import Login_Page from "./Pages/Login_Page";
+import Student_Dashboard from "./Pages/Student_Dashboard"
 
 function App() {
   return (
-    <>
-    <h1>
-      <Landing_Page/>
-
-  </h1>
-    </>
+    <Routes>
+      {/* <Route path="/" element={<Landing_Page />} /> */}
+      {/* <Route path="/login" element={<Login_Page />} /> */}
+      <Route path="/student" element={<Student_Dashboard />} />
+    </Routes>
   );
 }
 
